@@ -1,0 +1,17 @@
+{
+    "name": "AL",
+    "type": "code",
+    "creator": "Tony OHagan",
+    "summary": "Light weight API for manual and automated diagnostic logging. Supports Sencha ExtJS and Sencha Touch.",
+    "detailedDescription": "Rule based logging for Sencha ExtJS and Sencha Touch. 
+
+    **Automatic Logging**: Logging of method calls can be enabled on any pattern of name space, class or method name.  This significantly reduces logging coding effort since entire classes or name spaces can be logged with a single rule. Output records: Pre-call arguments, Post-call results (or arguments), Call Exceptions, Nested call depth and Call Timings. The injected code is optimised based on the features selected. Nested calls displays as collapsible regions per call if supported by the browser's `console` object (e.g. Chrome).  Automated logging does not alter original code and has zero performance impact when not enabled so is preferable in performance sensitive production apps.
+
+    **Manual Logging**: A log object per class is injected for classes that declares the property `log: true`. Class methods can then call `this.log.debug()/.info()/.log()/.warn()/.error()` or `.fatal()` corresponding to the priority level. Output includes class name and participates in call depth tracking if enabled.  Chrome console output show hyperlinks to source code and display call stack for .error() and fatal() calls.  Priority level output can be adjusted by class (static) or by method call (dynamic) rules. Log methods that are disabled for a class due to priority level rules are replaced with empty functions so as to minimize performance impact in production.",
+	
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "format": "1",
+    "local": true,
+    "requires": []
+}

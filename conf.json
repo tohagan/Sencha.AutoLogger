@@ -1,0 +1,14 @@
+{
+    "--": ".",
+	"--exclude": "unit-tests",
+	"--title": "Logging and Interceptor API.",
+    "--warnings": [
+        "-link",
+        "-type_name"
+    ],
+    "--ignore-html": [
+        "locale",
+        "debug"
+    ],
+	"--ignore-global": true
+}
