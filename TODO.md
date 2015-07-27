@@ -1,12 +1,12 @@
-Rename name to AutoLogger with AL prefix.
 
-Convert ST into a Sencha package.
-Good example is https://github.com/deftjs/DeftJS
+## To do
 
 Add interceptors for callback functions
   - Displays functions sent as arguments as #F<unique-number>
   - When the function is called, report the call as #F<unique-number>(): args ...
   - A rule option to turn this on for method calls.
+
+## Ideas
 
 Perhaps replace ST.Logger.logCalls()/preCalls()/postCalls()/ with a single ST.Logger.logCalls() that
 uses an `options` object to select the features to enable/disable.
