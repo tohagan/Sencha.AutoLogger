@@ -1,10 +1,30 @@
-## Sencha Auto Logger
+# Sencha Class Auto Logger
 
-Provides a rule based logging extension framework for Sencha ExtJS and Sencha Touch applications and libraries.
+## Summary
+
+Automated rule based logging API for Sencha ExtJS & Sencha Touch. 
+
+Performance optimised call logging that records: 
+- class and method name, 
+- call arguments and response, 
+- exceptions, 
+- call timing 
+- nested call depth 
+
+Select logging for any pattern of namespace, class or method name. 
+
+Significantly reduces diagnostic logging coding effort and speeds up defect diagnosis. Entire classes or namespaces can be logged with a single line rule. Displays as collapsible regions and hyperlinked to log calls in Chrome console. 
+
+Zero overheads when disabled so ideal for diagnosing faults in both development and production builds. 
+Rules can select logging level by Sencha namespace, class or method patterns.
+
+
+## Details
 
 Rules are declared after Sencha core classes but before application and other Sencha classes are defined.
+
 They allow performance optimised fine grained control of application logging that does not alter application
-code and thus is invaluable in diagnosing faults for both development and production apps.
+code and thus is invaluable in diagnosing faults for both development and production application.
 
 Automatic logging of method calls can be enabled on any pattern of namespace, class or method name.
 This significantly reduces logging coding effort since now entire classes or namespaces can be logged with a single rule.
@@ -37,7 +57,7 @@ Dynamic rules can be used to trigger adjustment of the logging level in the scop
       // Log all methods named '*event*'
       AL.Logger.logCalls(null, /event/);  
       
-      // Log 'PT' application methods
+      // Log all class methods in PT namespaces
       AL.Logger.logCalls(/^PT$/);         
 
       AL.Logger.logPreCalls(/model/);     // Only log requests
