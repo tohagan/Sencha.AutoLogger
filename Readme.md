@@ -64,10 +64,10 @@ Dynamic rules can be used to trigger adjustment of the logging level in the scop
       AL.Logger.logPostCalls(/model/);    // Only log responses
 
       Ext.define('com.cool.MyClass', {
-          // Auto log all methods starting with "on" prefix.
+          // Logs class methods starting with "on" prefix.
           logMethods: /^on/,   
 
-          // Replaced with static AL.Logger instance linked that logs the class name.
+          // Replaced with static AL.Logger instance that logs the class name.
           log: true,           
 
           funky: function() {
