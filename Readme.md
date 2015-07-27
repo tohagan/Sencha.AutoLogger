@@ -27,18 +27,28 @@ Dynamic rules can be used to trigger adjustment of the logging level in the scop
 ### Example:
 
       // Applies logging over set of classes & methods.
-      AL.Logger.logCalls(/controller/);   // Log all requests, responses, exceptions & call times from controller methods
-      AL.Logger.logCalls(/controller/, null, false);  // Exclude call times.
-      AL.Logger.logCalls(null, /event/);  // Log all methods named '*event*'
-      AL.Logger.logCalls(/^PT$/);         // Log 'PT' application methods
+
+      // Log all requests, responses, exceptions & call times from controller methods
+      AL.Logger.logCalls(/controller/);   
+
+      // Exclude call times.
+      AL.Logger.logCalls(/controller/, null, false);  
+      
+      // Log all methods named '*event*'
+      AL.Logger.logCalls(null, /event/);  
+      
+      // Log 'PT' application methods
+      AL.Logger.logCalls(/^PT$/);         
 
       AL.Logger.logPreCalls(/model/);     // Only log requests
       AL.Logger.logPostCalls(/model/);    // Only log responses
 
       Ext.define('com.cool.MyClass', {
-          logMethods: /^on/,   // Auto log all methods starting with "on" prefix.
+          // Auto log all methods starting with "on" prefix.
+          logMethods: /^on/,   
 
-          log: true,           // Replaced with static AL.Logger instance linked that logs the class name
+          // Replaced with static AL.Logger instance linked that logs the class name.
+          log: true,           
 
           funky: function() {
              // Displayed if AL.LogLevels.DEBUG is set via AL.Logger.setClassLogLevel() or AL.Logger.setLogLevel()
