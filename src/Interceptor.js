@@ -315,6 +315,7 @@ Ext.define('AL.Interceptor', {
         var t = Object.prototype.toString.call(pattern);
 
         switch (t) {
+            case '[object Undefined]':
             case '[object Null]':
                 return this.matchAll;
             case '[object RegExp]':
