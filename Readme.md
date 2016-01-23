@@ -44,7 +44,7 @@ When possible, disabled methods on the class logger instance are replaced by Ext
 Static logging level rules can be used to adjust the logging level of sets of classes or class namespaces.
 Dynamic rules can be used to trigger adjustment of the logging level in the scope of any method or event.
 
-### Example:
+### Startup:
 
       Ext.Loader.setPath({
         'AL': 'AL/src',
@@ -57,9 +57,14 @@ Dynamic rules can be used to trigger adjustment of the logging level in the scop
         'AL.Logger'
       ], function () {
         AL.Logger.init();
+        // ** Add logging rules here **
         AL.Logger.logCalls(/ComponentPaint/, /Hidden/);
       });
 
+      Ext.Application( ... );
+      
+      
+### Example Logging Rules:
 
       // Applies logging over set of classes & methods.
 
@@ -77,6 +82,8 @@ Dynamic rules can be used to trigger adjustment of the logging level in the scop
 
       AL.Logger.logPreCalls(/model/);     // Only log requests
       AL.Logger.logPostCalls(/model/);    // Only log responses
+
+## Class logging:
 
       Ext.define('com.cool.MyClass', {
           // Logs class methods starting with "on" prefix.
