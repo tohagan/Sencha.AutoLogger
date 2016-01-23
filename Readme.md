@@ -46,6 +46,21 @@ Dynamic rules can be used to trigger adjustment of the logging level in the scop
 
 ### Example:
 
+      Ext.Loader.setPath({
+        'AL': 'AL/src',
+        'Ext': 'touch/src',
+        'MyApp': 'app'
+      });
+
+      Ext.require([
+        'AL.Interceptor',
+        'AL.Logger'
+      ], function () {
+        AL.Logger.init();
+        AL.Logger.logCalls(/ComponentPaint/, /Hidden/);
+      });
+
+
       // Applies logging over set of classes & methods.
 
       // Log all requests, responses, exceptions & call times from controller methods
